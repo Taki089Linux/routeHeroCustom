@@ -8,15 +8,21 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    RouterModule.forRoot(appRoutes),
   ],
-  declarations: [AppComponent, HeroListComponent, CrisisListComponent],
+  declarations: [
+    AppComponent,
+    HeroListComponent,
+    CrisisListComponent,
+    PageNotFoundComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
